@@ -29,9 +29,9 @@ public class Main {
         Krug prviKrug = new Krug(imeKruga, radiusKruga);
         Pravokutnik prviPravokutnik = new Pravokutnik(imePravokutnika, stranicaPravokutnikaA, stranicaPravokutnikaB);
         Trokut prviTrokut = new Trokut(imeTrokuta, stranicaTrokutaA, stranicaTrokutaB, stranicaTrokutaC);
-        System.out.println("Opseg kruga je: " + prviKrug.opsegKruga() + ", a površina je: " + prviKrug.povrsinaKruga());
-        System.out.println("Opseg pravokutnika je: " + prviPravokutnik.opsegPravokutnika() + ", a površina je: " + prviPravokutnik.povrsinaPravokutnika());
-        System.out.println("Opseg trokuta je: " + prviTrokut.opsegTrokuta() + ", a površina je: " + prviTrokut.povrsinaTrokuta());
+        System.out.println("Opseg kruga je: " + prviKrug.opseg() + ", a površina je: " + prviKrug.povrsina());
+        System.out.println("Opseg pravokutnika je: " + prviPravokutnik.opseg() + ", a površina je: " + prviPravokutnik.povrsina());
+        System.out.println("Opseg trokuta je: " + prviTrokut.opseg() + ", a površina je: " + prviTrokut.povrsina());
 
     }
 }

@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        Ucilica u = new Ucilica();
+
         Scanner input = new Scanner(System.in);
         System.out.print("Unesite ime kruga: ");
         String imeKruga = input.nextLine();
@@ -29,9 +32,16 @@ public class Main {
         Krug prviKrug = new Krug(imeKruga, radiusKruga);
         Pravokutnik prviPravokutnik = new Pravokutnik(imePravokutnika, stranicaPravokutnikaA, stranicaPravokutnikaB);
         Trokut prviTrokut = new Trokut(imeTrokuta, stranicaTrokutaA, stranicaTrokutaB, stranicaTrokutaC);
-        System.out.println("Opseg kruga je: " + prviKrug.opseg() + ", a površina je: " + prviKrug.povrsina());
-        System.out.println("Opseg pravokutnika je: " + prviPravokutnik.opseg() + ", a površina je: " + prviPravokutnik.povrsina());
-        System.out.println("Opseg trokuta je: " + prviTrokut.opseg() + ", a površina je: " + prviTrokut.povrsina());
+
+        u.getGeolikovi().add(prviKrug);
+        u.getGeolikovi().add(prviPravokutnik);
+        u.getGeolikovi().add(prviTrokut);
+
+        u.getGeolikovi().sort(GeometrijskiLik::compareTo);
+
+        for (GeometrijskiLik geolikovi : u.getGeolikovi()) {
+            System.out.println(geolikovi);
+        }
 
     }
 }
